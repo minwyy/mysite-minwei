@@ -2,7 +2,7 @@ import uuidv1 from 'uuid/v1';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
+  title: 'Minwei | Web Developer', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
   description: '', // e.g: Welcome to my website
 };
@@ -18,10 +18,10 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  paragraphOne: "I'm a self-motivated web developer with a background requiring strong analysis and problem solving skills.",
+  paragraphTwo: 'Satisfying real clients with reliable and creative solutions are what I love.',
+  paragraphThree: "I'm eager to update my knowledges and skills to become a full-stack web developer in the next few years.",
+  resume: 'https://www.dropbox.com/s/g42he12utxgb5g6/2020_resume_minwei_yao_developer.docx?dl=0', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -59,36 +59,41 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'minwei.yao42@gmail.com',
 };
 
 // FOOTER DATA
 export const footerData = {
   networks: [
-    {
-      id: uuidv1(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: uuidv1(),
-      name: 'codepen',
-      url: '',
-    },
+    // {
+    //   id: uuidv1(),
+    //   name: 'twitter',
+    //   url: '',
+    // },
+    // {
+    //   id: uuidv1(),
+    //   name: 'weibo',
+    //   url: '',
+    // },
     {
       id: uuidv1(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/minwei-yao-6b23bb30/',
     },
     {
       id: uuidv1(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/minwyy',
+    },
+    {
+      id: uuidv1(),
+      name: 'google scholar',
+      url: 'https://scholar.google.com.au/citations?user=55bgxuIAAAAJ&hl=en',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
