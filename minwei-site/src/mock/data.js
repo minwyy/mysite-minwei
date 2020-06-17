@@ -19,8 +19,8 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne: "I'm a self-motivated web developer with a background requiring strong analysis and problem solving skills.",
-  paragraphTwo: 'Satisfying real clients with reliable and creative solutions are what I love.',
-  paragraphThree: "I'm eager to update my knowledges and skills to become a full-stack web developer in the next few years.",
+  paragraphTwo: 'Satisfying  clients with reliable and creative solutions is what I love.',
+  paragraphThree: "I'm eager to update my knowledge and skills to become a full-stack web developer in the next few years.",
   resume: 'https://www.dropbox.com/s/g42he12utxgb5g6/2020_resume_minwei_yao_developer.docx?dl=0', // if no resume, the button will not show up
 };
 
