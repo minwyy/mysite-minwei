@@ -38,13 +38,12 @@ const sortedCategories = resume.skills.map(c => {
     .map(k => {
       return {
         name: k,
-        // score is currently just duration
-        score: (resume.work && durationForSkill(resume.work, k)) || 0
+        // score is currently not used due to lack of experience
+        score: resume.work || 0
       };
     })
-    .sort((a, b) => {
-      return b.score - a.score;
-    });
+    // sort skills alphabetically
+    .sort((a, b) => a.name.localeCompare(b.name));
   return {
     ...c,
     keywords: nk
@@ -52,45 +51,32 @@ const sortedCategories = resume.skills.map(c => {
 });
 
 // import { Andri } from "./pictures";
-import { durationForSkill } from "./skills";
+// import { durationForSkill } from "./skills";
 
 const CVFrontpage = ({ image }) => (
   <Page size="A4" style={styles.page}>
-    <View style={styles.top}>
-      <Head src={image} />
       <View
         style={{
-          marginLeft: 40
-          //alignItems: "center"
+          // marginTop: 5,
+          paddingVertical: 10,
+          borderTop: 0.5,
+          borderBottom: 0.5,
+          borderColor: "#d3d3d3",
+          backgroundColor: "black"
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "semibold" }}>
-          Andri Óskarsson
+        <Text
+          style={{
+            fontStyle: "italic",
+            fontSize: 12,
+            textAlign: "center",
+            color: "white"
+          }}
+        >
+          {resume.basics.summary}
         </Text>
-        <Text style={{ fontSize: 12 }}>Computer Engineer</Text>
       </View>
-    </View>
-    <View
-      style={{
-        marginTop: 5,
-        paddingVertical: 10,
-        borderTop: 0.5,
-        borderBottom: 0.5,
-        borderColor: "#d3d3d3",
-        backgroundColor: colors.programming
-      }}
-    >
-      <Text
-        style={{
-          fontStyle: "italic",
-          fontSize: 12,
-          textAlign: "center",
-          color: "white"
-        }}
-      >
-        {resume.basics.summary}
-      </Text>
-    </View>
+
 
     <View
       style={{
@@ -109,11 +95,60 @@ const CVFrontpage = ({ image }) => (
             />
           ))}
         </Box>
+        <View>
+          <SectionHeader>Experience</SectionHeader>
+          {resume.work.slice(0, 100).map((w, idx) => (
+            <TimelineItem
+              idx={idx}
+              key={`${w.company + w.startDate}`}
+              title={w.position}
+              employer={w.company}
+              period={periodToString(w.startDate, w.endDate)}
+              tags={w.skills}
+              skills={resume.skills}
+            >
+              {w.summary}
+            </TimelineItem>
+          ))}
+        </View>
+        <View style={{marginTop: 10}}>
+          <Box title="About">
+            <Paragraph>
+              I come from Shanghai and am the oldest of 3 siblings. In
+              2006 I moved to Sydney to study. Since then I love this city 
+              so I stayed to pursue my doctoral degree in engineering. 
+              Realizing that I am addicted to coding and enjoy the 
+              rewards when addressing the challenges, I decided to select web developer 
+              as my career.
+              In my off-time I like to cook, take
+              photos and go for walks.
+            </Paragraph>
+            <Paragraph>
+              I've been facinated by computers since young and spend much of my
+              free time, learning more about them.
+            </Paragraph>
+          </Box>
+        </View>
+      </View>
 
+      <View wrap={true} style={styles.right}>
+      <View
+        style={{
+          // marginLeft: 40
+          alignItems: "center"
+        }}
+      >
+        <Head src={image} />
+        <Text style={{ fontSize: 20, fontWeight: "semibold" }}>
+        Minwei Yao
+        </Text>
+        <Text style={{ fontSize: 12 }}>Front-end Developer</Text>
+      </View>
+        <View style={{marginTop: 25}}>
         <Box title="Skills">
-          <Text style={{ color: "grey", fontSize: 8, marginTop: -5 }}>
+          {/* <Text style={{ color: "grey", fontSize: 8, marginTop: -5 }}>
             Ordered by experience
-          </Text>
+          </Text> */}
           {sortedCategories.map(s => (
             <View key={s.name} wrap={true} style={{ marginTop: 10 }}>
               <Text style={{ fontWeight: "bold", color: s.color }} key={s.name}>
@@ -136,54 +171,26 @@ const CVFrontpage = ({ image }) => (
             </View>
           ))}
         </Box>
-
-        <Box title="About">
-          <Paragraph>
-            I come from Reykjavík, Iceland and am the oldest of 5 brothers. In
-            2006 I moved to Denmark to study. I now live near Aalborg, Denmark
-            with my girlfriend and son. In my off-time I like to cook, take
-            photos and go for walks.
-          </Paragraph>
-          <Paragraph>
-            I've been facinated by computers since age 8 and spend much of my
-            free time, learning more about them.
-          </Paragraph>
-        </Box>
-
+        </View>
         <Box title="Languages">
-          <Text>Icelandic (native)</Text>
-          <Text>English (fluent)</Text>
-          <Text>Danish (fluent)</Text>
-        </Box>
-
-        <Box title="Social">
-          <Text>Co-organizer & Speaker Aalborg React Meetup</Text>
-          <Text>Co-organizer & Speaker Aalborg Hackathon</Text>
+        {resume.languages.map(lg => (
+            <View key={lg.language}
+             style={{
+               flexDirection: "row"
+             }}
+            >
+                <Tag color="blue">
+                    <Text>{lg.language} ({lg.fluency})</Text>
+                 </Tag>
+            </View>
+        ))}
         </Box>
 
         <Box title="Contact">
-          <Link src="mailto:m@andri.dk">
-            <Text>m@andri.dk</Text>
+          <Link src="mailto:minwei.yao42@gmail.com">
+            <Text>minwei.yao42@gmail.com</Text>
           </Link>
         </Box>
-      </View>
-      <View wrap={true} style={styles.right}>
-        <View>
-          <SectionHeader>Experience</SectionHeader>
-          {resume.work.slice(0, 100).map((w, idx) => (
-            <TimelineItem
-              idx={idx}
-              key={`${w.company + w.startDate}`}
-              title={w.position}
-              employer={w.company}
-              period={periodToString(w.startDate, w.endDate)}
-              tags={w.skills}
-              skills={resume.skills}
-            >
-              {w.summary}
-            </TimelineItem>
-          ))}
-        </View>
       </View>
     </View>
     <View fixed style={styles.footer}>
@@ -231,7 +238,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   left: {
-    width: "50%",
+    width: "70%",
     marginTop: 20,
     paddingRight: 10
     //flex: 1,
@@ -239,7 +246,7 @@ const styles = StyleSheet.create({
   right: {
     marginTop: 20,
     paddingLeft: 10,
-    width: "50%"
+    width: "30%",
     //flex: 1
   },
   footer: {

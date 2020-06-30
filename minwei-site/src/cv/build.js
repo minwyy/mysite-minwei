@@ -30,7 +30,7 @@ Font.register({
 	]
 })
 
-const imagePath = path.join(__dirname, '../images/profile.jpg')
+const imagePath = path.join(__dirname, '../images/profile-cv.jpg')
 // console.log(imagePath)
 const imageB64 = fs.readFileSync(imagePath,
 	'base64'
