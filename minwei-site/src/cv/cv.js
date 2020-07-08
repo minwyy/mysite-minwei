@@ -77,7 +77,6 @@ const CVFrontpage = ({ image }) => (
         </Text>
       </View>
 
-
     <View
       style={{
         flexDirection: "row"
@@ -92,6 +91,7 @@ const CVFrontpage = ({ image }) => (
               area={e.area}
               period={periodToString(e.startDate, e.endDate)}
               studyType={e.studyType}
+              awards={e.awards}
             />
           ))}
         </Box>
@@ -107,11 +107,30 @@ const CVFrontpage = ({ image }) => (
               tags={w.skills}
               skills={resume.skills}
             >
-              {w.summary}
-            </TimelineItem>
-          ))}
+            {w.summary.map(e => (
+                <View key={e} wrap={true} style={{marginBottom: 3, flexDirection: "row"}} >
+                  <View style={{width: "2%"}}><Text style={{"color": "#2B6CB0"}}>•</Text></View>
+                  <View style={{width: "98%"}}>
+                    <Text key={e} style={{ color: "#2B6CB0", fontSize: 10}}>{e}</Text>
+                  </View>
+                </View>
+            ))}
+            </TimelineItem> )
+          )}
         </View>
         <View style={{marginTop: 10}}>
+            <Box title="Skill Summary">
+              {resume.skillsummary.map(e => (
+                <View key={e} wrap={true} style={{marginTop: 3, flexDirection: "row"}} >
+                  <View style={{width: "2%"}}><Text>•</Text></View>
+                  <View style={{width: "98%"}}>
+                     <Text>{e}</Text>
+                  </View>
+                </View>
+              ))}
+            </Box>
+        </View>
+        {/* <View style={{marginTop: 10}}>
           <Box title="About">
             <Paragraph>
               I come from Shanghai and am the oldest of 3 siblings. In
@@ -124,9 +143,20 @@ const CVFrontpage = ({ image }) => (
               photos and go for walks.
             </Paragraph>
             <Paragraph>
-              I've been facinated by computers since young and spend much of my
+              I've been fascinated by computers since young and spend much of my
               free time, learning more about them.
             </Paragraph>
+          </Box>
+        </View> */}
+        <View style={{marginTop: 10}}>
+          <Box title="Reference">
+            {resume.referees.map(e => (
+              <View key={e}>
+                <Text>{e.name}</Text>
+                <Text>{e.title}</Text>
+                <Text>{e.contact}</Text>
+              </View>
+            ))}
           </Box>
         </View>
       </View>
@@ -135,15 +165,21 @@ const CVFrontpage = ({ image }) => (
       <View
         style={{
           // marginLeft: 40
-          alignItems: "center"
+          alignItems: "left"
         }}
       >
-        <Head src={image} />
+        {/* <Head src={image} /> */}
         <Text style={{ fontSize: 20, fontWeight: "semibold" }}>
         Minwei Yao
         </Text>
         <Text style={{ fontSize: 12 }}>Front-end Developer</Text>
+        <Link src="minwei.surge.sh">Personal site</Link>
+        <Link src="https://github.com/minwyy">Github link</Link>
+        <Link src="https://www.linkedin.com/in/minwei-yao-6b23bb30/">Linkedin link</Link>
       </View>
+        <View style={{marginTop: 10}}>
+          <Text>Nationality: Australian</Text>
+        </View>
         <View style={{marginTop: 25}}>
         <Box title="Skills">
           {/* <Text style={{ color: "grey", fontSize: 8, marginTop: -5 }}>
@@ -187,9 +223,14 @@ const CVFrontpage = ({ image }) => (
         </Box>
 
         <Box title="Contact">
-          <Link src="mailto:minwei.yao42@gmail.com">
-            <Text>minwei.yao42@gmail.com</Text>
-          </Link>
+          <View>
+            <Text style={{marginBottom: 3}}>Address: 37/56 Powell St, Homebush</Text>
+            <Text style={{marginBottom: 3}}>Mobile: {resume.basics.mobile}</Text>
+            <Text style={{marginBottom: 3}}>Email: </Text>
+            <Link style={{marginBottom: 3}} src="mailto:minwei.yao42@gmail.com">
+              <Text>{resume.basics.email}</Text>
+            </Link>
+          </View>
         </Box>
       </View>
     </View>
@@ -225,7 +266,7 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     paddingHorizontal: 30,
     //marginHorizontal: 30,
-    fontSize: 8,
+    fontSize: 10,
     // color: theme.colors.gray[900],
     fontFamily: "DefaultFont"
   },

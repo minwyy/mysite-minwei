@@ -106,10 +106,10 @@ export const TimelineItem = ({
           <Text style={{ fontWeight: "bold" }}>{title}</Text>
           <Text>{employer}</Text>
         </View>
-        <Text style={{ color: "grey", fontSize: 8 }}>{period}</Text>
+        <Text style={{ color: "grey", fontSize: 10, fontWeight: "bold" }}>{period}</Text>
       </View>
 
-      {children && <Text style={{ marginBottom: 2.5 }}>{children}</Text>}
+      {children && <View style={{ marginBottom: 2.5 }}>{children}</View>}
       {tags && (
         <View wrap style={{ flexDirection: "row", flexWrap: "wrap" }}>
           {tags &&
@@ -141,7 +141,7 @@ export const TimelineItem = ({
   );
 };
 
-export const EducationItem = ({ institution, period, area, studyType }) => (
+export const EducationItem = ({ institution, period, area, studyType, awards }) => (
   <View wrap={false} style={{ marginTop: 5 }}>
     <View
       style={{
@@ -152,9 +152,14 @@ export const EducationItem = ({ institution, period, area, studyType }) => (
       <Text style={{ fontWeight: "bold" }}>
         {area}, {studyType}
       </Text>
-      <Text style={{ color: "grey" }}>{period}</Text>
+      <Text style={{ color: "grey", fontWeight: "bold" }}>{period}</Text>
     </View>
-    <Text style={{ fontWeight: "normal" }}>{institution}</Text>
+    <Text style={{ fontWeight: "bold" }}>{institution}</Text>
+    {awards.map(e => (
+      <Text key={e} style={{ color: "darkcyan", fontSize: 10, marginTop: 3 }}>
+        {e}
+      </Text>
+    ))}
   </View>
 );
 
@@ -174,7 +179,7 @@ export const Tag = ({ color = colors.borders, children, badgeText }) => (
   >
     <Text
       style={{
-        fontSize: 6,
+        fontSize: 8,
         //fontWeight: "bold",
         //color: hex("#00000", color) < 10 ? "white" : "black"
         color: "black"
@@ -195,7 +200,7 @@ export const Tag = ({ color = colors.borders, children, badgeText }) => (
       >
         <Text
           style={{
-            fontSize: 5,
+            fontSize: 7,
             color: "white"
           }}
         >

@@ -4,6 +4,7 @@
       "label": "Front-end Developer",
       "picture": "https://www.dropbox.com/s/mheep2ghj3p80pk/_DSC1575.JPG?dl=0",
       "email": "minwei.yao42@gmail.com",
+      "mobile": "0433482745",
       "website": "http://minwei.surge.sh/",
       "summary": "Driven, independent Web Developer with strong problem-solving abilities.",
       "location": {
@@ -35,7 +36,10 @@
         "position": "Research Assistant",
         "website": "https://www.uts.edu.au/",
         "startDate": "2019-12-01",
-        "summary": "Prepared documents for project proposals."
+        "summary": [
+            "Carried out 3-year industry-academic collaboration project successfully as main contributor",
+            "Took responsibility for training 10+ new PhD students "
+        ]
       },
       {
         "company": "University of Technology Sydney",
@@ -43,14 +47,20 @@
         "website": "https://www.uts.edu.au/",
         "startDate": "2014-02-01",
         "endDate": "2019-11-01",
-        "summary": "Liaised with supervisors, funding providers, collaborators, and other stakeholders to keep projects organised. Worked collaboratively with internal and external stakeholders to meet the objectives of projects."
+        "summary": [
+            "Collaborated with internal and external stakeholders to meet projects objectives on schedule",
+            "Developed innovative methodologies to address challenges with 20% improvement of efficiency",
+            "Delivered research outcomes via 7 conference presentation and 20 academic paper publish"
+        ]
       },
       {
         "company": "State Water Corporation (now WaterNSW)",
         "position": "Engineer Intern",
         "startDate": "2012-3-01",
         "endDate": "2013-10-01",
-        "summary": "Performed life cycle analysis and conducted system design"
+        "summary": [
+          "Performed life cycle analysis on water treatment plant"
+        ]
       }
     ],
     "education": [
@@ -58,57 +68,87 @@
         "institution": "Online Courses",
         "area": "Computer Science",
         "studyType": "Course",
-        "startDate": "2008-08-01"
+        "startDate": "2008-08-01",
+        "awards": []
       },
       {
         "institution": "University of Technology Sydney",
-        "area": "Water Engineering",
+        "area": "Engineering",
         "studyType": "PhD",
         "startDate": "2015-02-01",
-        "endDate": "2019-11-01"
+        "endDate": "2019-11-01",
+        "awards": [
+          "2019 FEIT PhD Post-Thesis Publication Award",
+          "MSA Travel Award",
+          "FEIT HDR Publication Award"
+        ]
       },
       {
         "institution": "University of Technology Sydney",
         "area": "Environmental Engineering",
         "studyType": "BSc",
         "startDate": "2008-03-02",
-        "endDate": "2012-11-03"
+        "endDate": "2012-11-03",
+        "awards": [
+          "FEIT Dean's list",
+          "Honours degree"
+        ]
       }
     ],
     "skills": [
       {
         "name": "Software Development",
         "level": "Junior",
-        "color": "#2B6CB0",
+        "color": "darkcyan",
         "keywords": [
           "HTML",
           "CSS",
           "JavaScript",
-          "React",
+          "ReactJS",
           "Java",
           "jQuery",
-          "Python"
+          "Python",
+          "GatsbyJS"
         ]
       },
       {
         "name": "System Operations",
-        "color": "#4C51BF",
+        "color": "#2B6CB0",
         "level": "Junior",
         "keywords": [
-          "Github",
+          "Git",
           "Windows",
           "Mac"
         ]
       },
       {
-        "name": "Databases",
-        "color": "#319795",
+        "name": "Databases and APIs",
+        "color": "grey",
         "level": "Junior",
         "keywords": [
-          "SQLite"
+          "SQLite",
+          "GraphQL"
+        ]
+      },
+      {
+        "name": "Interpersonal skills",
+        "color": "darkcyan",
+        "level": "Junior",
+        "keywords": [
+          "Problem solving",
+          "Public speaking",
+          "Team work"
         ]
       }
     ],
+    "skillsummary": [
+      "Developed dynamic websites using reactJS + Redux, utilizing Firebase as database with authentication; websites deployed on Firebase",
+      "Utilized React Developer Tools and Redux Devtools for debugging",
+      "Designed and created static personal sites with reactJS + gatsbyJS + GraphQL, deployed on surge",
+      "Created personal cv in pdf format from json resume with reactJS and reactPDF library, integrated in my personal site",
+      "Using git and github for version control of my study and personal projects"
+    ],
+  
     "languages": [
       {
         "language": "Mandarin",
@@ -127,6 +167,12 @@
       {
         "name": "Personal",
         "keywords": ["Basketball", "Reading", "Hiking", "Photography"]
+      }
+    ],
+    "referees": [
+      {"name": "Prof. Ho Kyong Shon",
+        "title": "Professor in University of Technology Sydney",
+        "contact": "0447332707"
       }
     ],
     "meta": {

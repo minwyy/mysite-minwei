@@ -48,8 +48,7 @@ const About = () => {
                 <p className="about-wrapper__info-text">
                   {paragraphThree || "I'm eager to update my knowledge and skills to become a full-stack web developer in the next few years."}
                 </p>
-                {resume && (
-                  <span className="d-flex mt-3">
+                <span className="d-flex mt-3">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -59,7 +58,6 @@ const About = () => {
                       Resume
                     </a>
                   </span>
-                )}
               </div>
             </Fade>
           </Col>
