@@ -68,7 +68,7 @@
         "institution": "Online Courses",
         "area": "Computer Science",
         "studyType": "Course",
-        "startDate": "2008-08-01",
+        "startDate": "2018-09-01",
         "awards": []
       },
       {
@@ -131,22 +131,24 @@
         ]
       },
       {
-        "name": "Interpersonal skills",
+        "name": "Other skills",
         "color": "darkcyan",
         "level": "Junior",
         "keywords": [
           "Problem solving",
           "Public speaking",
-          "Team work"
+          "Team work",
+          "Initiative",
+          "Analytical"
         ]
       }
     ],
     "skillsummary": [
-      "Developed dynamic websites using reactJS + Redux, utilizing Firebase as database with authentication; websites deployed on Firebase",
+      "Developed dynamic websites using ReactJS + Redux, utilizing Firebase as database with authentication; websites deployed on Firebase",
       "Utilized React Developer Tools and Redux Devtools for debugging",
-      "Designed and created static personal sites with reactJS + gatsbyJS + GraphQL, deployed on surge",
-      "Created personal cv in pdf format from json resume with reactJS and reactPDF library, integrated in my personal site",
-      "Using git and github for version control of my study and personal projects"
+      "Designed and created static personal sites with ReactJS + GatsbyJS + GraphQL, deployed on surge",
+      "Created personal cv in pdf format from json resume with reactJS and ReactPDF library, integrated in my personal site",
+      "Using Git and GitHub for version control of my study and personal projects"
     ],
   
     "languages": [
