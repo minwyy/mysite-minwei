@@ -28,30 +28,21 @@ export const aboutData = {
 export const projectsData = [
   {
     id: uuidv1(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'project1.jpg',
+    title: 'BurgerMate',
+    info: 'A web app which is used to order customized burgers, requiring sign-in',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://react-burgermate.web.app/',
+    repo: 'https://github.com/minwyy/BurgerBuilder', // if no repo, the button will not show up
   },
   {
     id: uuidv1(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'project2.jpg',
+    title: "Minwei's personal site",
+    info: 'My personal site to sell myself, showcasing my portfolio',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: uuidv1(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://minwei.surge.sh/',
+    repo: 'https://github.com/minwyy/mysite-minwei', // if no repo, the button will not show up
   },
 ];
 
