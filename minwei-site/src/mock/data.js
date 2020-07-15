@@ -31,7 +31,7 @@ export const projectsData = [
     img: 'project1.jpg',
     title: 'BurgerMate',
     info: 'A web app which is used to order customized burgers, requiring sign-in',
-    info2: '',
+    info2: 'ReactJS, Firebase',
     url: 'https://react-burgermate.web.app/',
     repo: 'https://github.com/minwyy/BurgerBuilder', // if no repo, the button will not show up
   },
@@ -40,10 +40,20 @@ export const projectsData = [
     img: 'project2.jpg',
     title: "Minwei's personal site",
     info: 'My personal site to sell myself, showcasing my portfolio',
-    info2: '',
+    info2: 'ReactJS, GatsbyJS, GraphQL',
     url: 'https://minwei.surge.sh/',
     repo: 'https://github.com/minwyy/mysite-minwei', // if no repo, the button will not show up
   },
+  {
+    id: uuidv1(),
+    img: 'project3.jpg',
+    title: "The game of hog",
+    info: 'A course project written in Python with given GUI',
+    info2: 'Python',
+    url: '',
+    repo: 'https://github.com/minwyy/cs61a/tree/master/projects/hog', // if no repo, the button will not show up
+  }
+
 ];
 
 // CONTACT DATA

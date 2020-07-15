@@ -66,8 +66,20 @@ const Projects = () => {
       </Container>
       {projects.map((project,index) => {
             const { title, info, info2, url, repo, img } = project;
+            let seeLive = null;
+            if (url) {
+              seeLive = 
+              (<a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn cta-btn--hero"
+              href={url || '#!'}
+            >
+              See Live
+            </a>
+            )}
             return (
-              <Row key={index}>
+              <Row key={index} style={{marginTop: 20}}>
                 <Col lg={4} sm={12}>
                   <Fade
                     left={isDesktop}
@@ -84,15 +96,7 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
+                      {seeLive}
                       {repo && (
                         <a
                           target="_blank"
@@ -116,7 +120,7 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__image">
                       <a
-                        href={url || '#!'}
+                        href={url || null}
                         target="_blank"
                         aria-label="Project Link"
                         rel="noopener noreferrer"

@@ -224,7 +224,7 @@ const CVFrontpage = ({ image }) => (
 
         <Box title="Contact">
           <View>
-            <Text style={{marginBottom: 3}}>Address: 37/56 Powell St, Homebush</Text>
+            <Text style={{marginBottom: 3}}>Address: 37/56 Powell St, Homebush NSW</Text>
             <Text style={{marginBottom: 3}}>Mobile: {resume.basics.mobile}</Text>
             <Text style={{marginBottom: 3}}>Email: </Text>
             <Link style={{marginBottom: 3}} src="mailto:minwei.yao42@gmail.com">
