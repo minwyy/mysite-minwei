@@ -61,7 +61,7 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Portofolio" />
+          <Title title="Portfolio" />
         </div>
       </Container>
       {projects.map((project,index) => {
@@ -94,7 +94,7 @@ const Projects = () => {
                         <p>
                           {info}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        <p className="mb-4" style={{color: '#707070'}}>{info2 || ''}</p>
                       </div>
                       {seeLive}
                       {repo && (

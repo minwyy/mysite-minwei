@@ -39,7 +39,7 @@ export const projectsData = [
     id: uuidv1(),
     img: 'project2.jpg',
     title: "Minwei's personal site",
-    info: 'My personal site to sell myself, showcasing my portfolio',
+    info: 'My personal site to sell myself by showcasing portfolio',
     info2: 'ReactJS, GatsbyJS, GraphQL',
     url: 'https://minwei.surge.sh/',
     repo: 'https://github.com/minwyy/mysite-minwei', // if no repo, the button will not show up
@@ -52,8 +52,16 @@ export const projectsData = [
     info2: 'Python',
     url: '',
     repo: 'https://github.com/minwyy/cs61a/tree/master/projects/hog', // if no repo, the button will not show up
+  },
+  {
+    id: uuidv1(),
+    img: 'project4.jpg',
+    title: "Percolation",
+    info: 'A Java program homework used to analyse whether ground water filter through porous bedrock with given site data files',
+    info2: 'Java, IntelliJ IDEA',
+    url: '',
+    repo: 'https://github.com/minwyy/cs61b/tree/master/hw2', // if no repo, the button will not show up
   }
-
 ];
 
 // CONTACT DATA
