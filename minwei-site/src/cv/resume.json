@@ -8,7 +8,7 @@
       "website": "https://minwei.surge.sh/",
       "summary": "Driven, independent Web Developer with strong problem-solving abilities.",
       "location": {
-        "city": "Sdyeny",
+        "city": "Sydney",
         "countryCode": "Au",
         "region": "NSW"
       },
@@ -65,15 +65,16 @@
     ],
     "education": [
       {
-        "institution": "Online Courses",
-        "area": "Computer Science",
-        "studyType": "Course",
-        "startDate": "2018-09-01",
+        "institution": "University of New South Wales",
+        "area": "Information Technology",
+        "studyType": "Master",
+        "startDate": "2020-09-01",
+        "endDate": "2021-10-01",
         "awards": []
       },
       {
         "institution": "University of Technology Sydney",
-        "area": "Engineering",
+        "area": "Civil Engineering",
         "studyType": "PhD",
         "startDate": "2015-02-01",
         "endDate": "2019-11-01",
