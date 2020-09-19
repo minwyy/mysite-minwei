@@ -30,7 +30,7 @@ const Header = () => {
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Minwei Yao'}</span>
             <br />
-            {subtitle || "I'm a Front-end Developer."}
+            {subtitle || "I'm a Software Engineer."}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">

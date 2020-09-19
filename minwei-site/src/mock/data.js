@@ -18,9 +18,9 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: "I'm a self-motivated web developer with a background requiring strong analysis and problem solving skills.",
+  paragraphOne: "I'm a self-motivated software engineer with a background requiring strong analysis and problem solving skills.",
   paragraphTwo: 'Satisfying  clients with reliable and creative solutions is what I love.',
-  paragraphThree: "I'm eager to update my knowledge and skills to become a full-stack web developer in the next few years.",
+  paragraphThree: "I'm eager to update my knowledge and skills to become a full-stack developer in the next few years.",
   resume: 'cv.pdf', // if no resume, the button will not show up
 };
 

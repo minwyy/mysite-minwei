@@ -172,7 +172,7 @@ const CVFrontpage = ({ image }) => (
         <Text style={{ fontSize: 20, fontWeight: "semibold" }}>
         Minwei Yao
         </Text>
-        <Text style={{ fontSize: 12 }}>Front-end Developer</Text>
+        <Text style={{ fontSize: 12 }}>Software Engineer</Text>
         <Link src="minwei.surge.sh">Personal site</Link>
         <Link src="https://github.com/minwyy">Github link</Link>
         <Link src="https://www.linkedin.com/in/minwei-yao-6b23bb30/">Linkedin link</Link>
