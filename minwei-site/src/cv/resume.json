@@ -1,23 +1,18 @@
 {
     "basics": {
-      "name": "Minwei Yao",
-      "label": "Software Engineer",
+      "name": "Minwei Yao, PhD",
+      "label": "Senior Software Engineer",
       "picture": "https://www.dropbox.com/s/mheep2ghj3p80pk/_DSC1575.JPG?dl=0",
       "email": "minwei.yao42@gmail.com",
       "mobile": "0433482745",
       "website": "https://minwei.surge.sh/",
-      "summary": "Driven, independent Software Engineer with strong problem-solving abilities.",
+      "summary": "Senior Software Engineer with 5+ years building and operating cloud production infrastructure on AWS and colocation facilities across Australia and the US, supporting 10+ enterprise clients. Bilingual in Mandarin and English, experienced in microservice architecture, CI/CD automation and troubleshooting large-scale distributed systems.",
       "location": {
         "city": "Sydney",
-        "countryCode": "Au",
+        "countryCode": "AU",
         "region": "NSW"
       },
       "profiles": [
-        {
-          "network": "Twitter",
-          "username": "mattthevoid",
-          "url": "https://twitter.com/mattthevoid"
-        },
         {
           "network": "Github",
           "username": "minwyy",
@@ -32,13 +27,41 @@
     },
     "work": [
       {
+        "company": "Polonious Systems",
+        "position": "Senior Software Engineer",
+        "website": "https://www.polonious-systems.com/",
+        "startDate": "2025-06-01",
+        "summary": [
+            "Architected and operated production infrastructure for 10+ enterprise clients across AWS and colocation facilities in Australia and the United States",
+            "Built, deployed and on-call for production environments serving 10+ enterprise clients including a Tier-1 Australian bank, owning each environment end-to-end",
+            "Built monitoring, alerting and on-call response workflows to keep distributed services reliable at scale",
+            "Designed and operated CI/CD pipelines on Linux to streamline deployment, scaling and rollback of microservices",
+            "Integrated third-party services and APIs to extend platform functionality and reduce operational overhead",
+            "Collaborated across cross-functional teams (Design, Product, QA) and global stakeholders to deliver high-quality releases"
+        ]
+      },
+      {
+        "company": "Polonious Systems",
+        "position": "Software Engineer / Technical Support Engineer",
+        "website": "https://www.polonious-systems.com/",
+        "startDate": "2020-09-01",
+        "endDate": "2025-05-01",
+        "summary": [
+            "Built backend APIs and microservices in Java/Spring Boot backed by PostgreSQL, deployed via Docker on Linux hosts",
+            "Designed and tested new tools and architectures to improve system reliability and processing speed",
+            "Created front-end pages and forms in JavaScript/Ember.js, working across the full service lifecycle from inception to operation",
+            "Provided technical support and root-cause analysis for clients across multiple regions and timezones"
+        ]
+      },
+      {
         "company": "University of Technology Sydney",
         "position": "Research Assistant",
         "website": "https://www.uts.edu.au/",
         "startDate": "2019-12-01",
+        "endDate": "2020-08-01",
         "summary": [
             "Carried out 3-year industry-academic collaboration project successfully as main contributor",
-            "Took responsibility for training 10+ new PhD students "
+            "Took responsibility for training 10+ new PhD students"
         ]
       },
       {
@@ -48,15 +71,15 @@
         "startDate": "2014-02-01",
         "endDate": "2019-11-01",
         "summary": [
-            "Collaborated with internal and external stakeholders to meet projects objectives on schedule",
-            "Developed innovative methodologies to address challenges with 20% improvement of efficiency",
-            "Delivered research outcomes via 7 conference presentation and 20 academic paper publish"
+            "Collaborated with internal and external stakeholders to meet project objectives on schedule",
+            "Developed innovative methodologies to address challenges with 20% improvement in efficiency",
+            "Delivered research outcomes via 7 conference presentations and 20 academic paper publications"
         ]
       },
       {
         "company": "State Water Corporation (now WaterNSW)",
         "position": "Engineer Intern",
-        "startDate": "2012-3-01",
+        "startDate": "2012-03-01",
         "endDate": "2013-10-01",
         "summary": [
           "Performed life cycle analysis on water treatment plant"
@@ -79,9 +102,9 @@
         "startDate": "2015-02-01",
         "endDate": "2019-11-01",
         "awards": [
-          "2019 FEIT PhD Post-Thesis Publication Award",
-          "MSA Travel Award",
-          "FEIT HDR Publication Award"
+          "2019 FEIT PhD Post-Thesis Publication Award (1 of 3 winners)",
+          "FEIT HDR Publication Award (2016, 2018)",
+          "MSA Travel Award"
         ]
       },
       {
@@ -91,67 +114,75 @@
         "startDate": "2008-03-02",
         "endDate": "2012-11-03",
         "awards": [
-          "FEIT Dean's list",
+          "FEIT Dean's List",
           "Honours degree"
         ]
       }
     ],
     "skills": [
       {
-        "name": "Software Development",
-        "level": "Junior",
+        "name": "Languages & Frameworks",
+        "level": "Senior",
         "color": "darkcyan",
         "keywords": [
-          "HTML",
-          "CSS",
+          "Java",
+          "Spring Boot",
+          "Python",
+          "Kotlin",
           "JavaScript",
           "ReactJS",
-          "Java",
-          "jQuery",
-          "Python",
-          "GatsbyJS"
+          "React Native",
+          "Ember.js"
         ]
       },
       {
-        "name": "System Operations",
+        "name": "Cloud & Infrastructure",
         "color": "#2B6CB0",
-        "level": "Junior",
+        "level": "Senior",
+        "keywords": [
+          "AWS",
+          "Linux",
+          "Docker",
+          "Virtual Machine Manager",
+          "Colocation / On-prem",
+          "DevOps",
+          "CI/CD"
+        ]
+      },
+      {
+        "name": "Databases & Observability",
+        "color": "grey",
+        "level": "Mid",
+        "keywords": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "GraphQL",
+          "Monitoring & Alerting",
+          "On-call response"
+        ]
+      },
+      {
+        "name": "Tools & Practices",
+        "color": "darkcyan",
+        "level": "Senior",
         "keywords": [
           "Git",
-          "Windows",
-          "Mac"
-        ]
-      },
-      {
-        "name": "Databases and APIs",
-        "color": "grey",
-        "level": "Junior",
-        "keywords": [
-          "SQLite",
-          "GraphQL"
-        ]
-      },
-      {
-        "name": "Other skills",
-        "color": "darkcyan",
-        "level": "Junior",
-        "keywords": [
-          "Problem solving",
-          "Public speaking",
-          "Team work",
-          "Initiative",
-          "Analytical"
+          "Microservices",
+          "Distributed systems troubleshooting",
+          "Capacity planning",
+          "Anthropic Claude / AI tooling"
         ]
       }
     ],
     "skillsummary": [
-      "Developed dynamic websites using ReactJS + Redux, utilizing Firebase as database with authentication; websites deployed on Firebase",
-      "Utilized React Developer Tools and Redux Devtools for debugging",
-      "Designed and created static personal sites with ReactJS + GatsbyJS + GraphQL, deployed on surge",
-      "Created personal cv in pdf format from json resume with reactJS and ReactPDF library, integrated in my personal site",
-      "Using Git and GitHub for version control of my study and personal projects"
+      "Architected and operated production infrastructure on AWS and colocation facilities across AU and US regions, supporting 10+ enterprise clients",
+      "Built and maintained CI/CD pipelines, monitoring and on-call workflows on Linux, improving deployment speed and incident response",
+      "Designed backend microservices in Java / Spring Boot with PostgreSQL, containerised with Docker for portable deployment",
+      "Engaged in the full service lifecycle - from design and implementation through deployment, operation and capacity planning",
+      "Collaborated effectively across timezones in both English and Mandarin, bridging Australian, Chinese and other global teams"
     ],
-  
+
     "languages": [
       {
         "language": "Mandarin",
@@ -173,9 +204,9 @@
       }
     ],
     "referees": [
-      {"name": "Prof. Ho Kyong Shon",
-        "title": "Professor in University of Technology Sydney",
-        "contact": "0447332707"
+      {"name": "Stuart Guthrie",
+        "title": "CEO of Polonious",
+        "contact": "0403 470 123"
       }
     ],
     "meta": {

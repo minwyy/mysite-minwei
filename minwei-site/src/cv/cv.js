@@ -34,16 +34,13 @@ import {
 import resume from "./resume.json";
 
 const sortedCategories = resume.skills.map(c => {
-  const nk = c.keywords
-    .map(k => {
-      return {
-        name: k,
-        // score is currently not used due to lack of experience
-        score: resume.work || 0
-      };
-    })
-    // sort skills alphabetically
-    .sort((a, b) => a.name.localeCompare(b.name));
+  const nk = c.keywords.map(k => {
+    return {
+      name: k,
+      // score is currently not used due to lack of experience
+      score: resume.work || 0
+    };
+  });
   return {
     ...c,
     keywords: nk
@@ -83,18 +80,6 @@ const CVFrontpage = ({ image }) => (
       }}
     >
       <View style={styles.left}>
-        <Box title="Education">
-          {resume.education.map(e => (
-            <EducationItem
-              key={`${e.institution + e.startDate}`}
-              institution={e.institution}
-              area={e.area}
-              period={periodToString(e.startDate, e.endDate)}
-              studyType={e.studyType}
-              awards={e.awards}
-            />
-          ))}
-        </Box>
         <View>
           <SectionHeader>Experience</SectionHeader>
           {resume.work.slice(0, 100).map((w, idx) => (
@@ -115,8 +100,22 @@ const CVFrontpage = ({ image }) => (
                   </View>
                 </View>
             ))}
-            </TimelineItem> )
-          )}
+            </TimelineItem>
+          ))}
+        </View>
+        <View style={{marginTop: 10}}>
+          <Box title="Education">
+            {resume.education.map(e => (
+              <EducationItem
+                key={`${e.institution + e.startDate}`}
+                institution={e.institution}
+                area={e.area}
+                period={periodToString(e.startDate, e.endDate)}
+                studyType={e.studyType}
+                awards={e.awards}
+              />
+            ))}
+          </Box>
         </View>
         <View style={{marginTop: 10}}>
             <Box title="Skill Summary">
@@ -170,10 +169,9 @@ const CVFrontpage = ({ image }) => (
       >
         {/* <Head src={image} /> */}
         <Text style={{ fontSize: 20, fontWeight: "semibold" }}>
-        Minwei Yao
+        Minwei Yao, PhD
         </Text>
-        <Text style={{ fontSize: 12 }}>Software Engineer</Text>
-        <Link src="minwei.surge.sh">Personal site</Link>
+        <Text style={{ fontSize: 12 }}>Senior Software Engineer</Text>
         <Link src="https://github.com/minwyy">Github link</Link>
         <Link src="https://www.linkedin.com/in/minwei-yao-6b23bb30/">Linkedin link</Link>
       </View>
@@ -224,7 +222,7 @@ const CVFrontpage = ({ image }) => (
 
         <Box title="Contact">
           <View>
-            <Text style={{marginBottom: 3}}>Address: 37/56 Powell St, Homebush NSW</Text>
+            <Text style={{marginBottom: 3}}>Location: Sydney, NSW</Text>
             <Text style={{marginBottom: 3}}>Mobile: {resume.basics.mobile}</Text>
             <Text style={{marginBottom: 3}}>Email: </Text>
             <Link style={{marginBottom: 3}} src="mailto:minwei.yao42@gmail.com">
@@ -263,7 +261,7 @@ const styles = StyleSheet.create({
     //paddingVertical: 30,
     position: "relative",
     paddingTop: 20,
-    paddingBottom: 40,
+    paddingBottom: 70,
     paddingHorizontal: 30,
     //marginHorizontal: 30,
     fontSize: 10,
@@ -294,10 +292,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     borderTopColor: "#d3d3d3",
     borderTopWidth: 0.5,
-    paddingVertical: 10,
+    paddingVertical: 6,
     width: "100%",
     position: "absolute",
-    bottom: 20,
+    bottom: 10,
     left: 20
   }
 });
